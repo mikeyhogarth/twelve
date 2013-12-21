@@ -1,0 +1,14 @@
+%nav.top-bar{:data => {:topbar => true}}
+  %ul.title-area
+    %li.name  
+      %h1= link_to "Gez and Sarah's Mystery Holiday", root_url 
+    %li.toggle-topbar.menu-icon
+      = link_to content_tag(:span, "Menu"),"#"
+
+  %section.top-bar-section
+    %ul.right
+      -if user_signed_in?
+        %li= link_to "Signed in as #{current_user.email}", "#"  
+        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+      -else
+        %li= link_to "Log in", new_user_session_path

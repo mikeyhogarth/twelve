@@ -1,0 +1,8 @@
+.panel
+  %p=comment.body
+  %p.time=comment.created_at.to_formatted_s(:short)
+   
+  -if user_signed_in?
+    %ul.button-group
+      %li= link_to 'Edit', edit_comment_path(comment), :class => [:button, :small]
+      %li= link_to 'Destroy', comment, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => [:button, :small, :secondary]
