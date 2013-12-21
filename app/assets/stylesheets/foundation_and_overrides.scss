@@ -4,7 +4,8 @@
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 
-$body-bg: #fff url(wet_snow.png) left top repeat;
+$body-bg: #fff asset-url("wet_snow.png") left top repeat;
+
 $body-font-family: 'Lato', sans-serif;
 $body-font-weight: 300;
 $paragraph-font-weight: 300;
